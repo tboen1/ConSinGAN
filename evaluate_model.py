@@ -1,3 +1,4 @@
+import importlib
 import os
 import torch
 import torch.nn as nn
@@ -8,7 +9,7 @@ from ConSinGAN.config import get_arguments
 import ConSinGAN.functions as functions
 import ConSinGAN.models as models
 from ConSinGAN.imresize import imresize, imresize_to_shape
-
+importlib.reload(models)
 
 def make_dir(path):
     try:
